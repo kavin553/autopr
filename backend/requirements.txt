@@ -1,0 +1,7 @@
+crewai
+pygithub
+groq
+fastapi
+uvicorn
+gradio
+python-dotenv
