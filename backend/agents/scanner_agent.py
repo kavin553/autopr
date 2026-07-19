@@ -23,7 +23,7 @@ def build_scanner_agent():
 
 def build_scanner_task(agent, issues, skills):
     issues_text = "\n".join(
-        f"- #{i['number']}: {i['title']} (labels: {', '.join(i['labels']) or 'none'})\n  {i['body_snippet']}"
+        f"- #{i.number}: {i.title} (labels: {', '.join(i.labels) or 'none'})\n  {i.body_snippet}"
         for i in issues
     )
     return Task(
