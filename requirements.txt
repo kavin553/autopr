@@ -1,0 +1,9 @@
+crewai
+litellm==1.60.0
+pygithub
+groq
+fastapi
+uvicorn
+gradio
+python-dotenv
+requests
