@@ -1,6 +1,7 @@
 """
-Combined entrypoint for Hugging Face Spaces — calls the pipeline directly.
+Combined entrypoint for deployment (Render) — calls the pipeline directly.
 """
+import os
 import gradio as gr
 from backend.agents.crew import run_full_pipeline
 
@@ -39,4 +40,5 @@ with gr.Blocks(title="AutoPR — GitHub Contribution Assistant") as demo:
 
     run_button.click(fn=run_autopr, inputs=[repo_input, skills_input], outputs=[scan_output, plan_output, pr_output])
 
-demo.launch()
+if __name__ == "__main__":
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
