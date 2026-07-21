@@ -1,4 +1,4 @@
-crewai==1.9.3
+crewai>=0.80.0,<1.0.0
 litellm==1.60.0
 pygithub
 groq
